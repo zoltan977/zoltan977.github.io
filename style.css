@@ -144,6 +144,8 @@ main section article h1 {
 }
 main section article img {
   margin: 1em;
+  height: 5rem;
+  width: 5rem;
 }
 main section article .tile-container {
   display: flex;
