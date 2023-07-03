@@ -1,0 +1,71 @@
+.switch {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 100px;
+  margin-top: 24px;
+}
+.switch .knobs,
+.switch .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+.switch [type=checkbox] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.switch .knobs {
+  z-index: 2;
+}
+.switch .knobs:before, .switch .knobs:after {
+  content: "HUN";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+.switch .knobs:before {
+  content: "HUN";
+}
+.switch .knobs:after {
+  content: "ENG";
+  right: -28px;
+  left: auto;
+  background-color: #f44336;
+}
+.switch [type=checkbox]:checked + .knobs:before {
+  left: -28px;
+}
+.switch [type=checkbox]:checked + .knobs:after {
+  right: 4px;
+}
+.switch [type=checkbox]:checked ~ .layer {
+  background-color: #fcebeb;
+}/*# sourceMappingURL=switch.css.map */
