@@ -186,5 +186,5 @@ main section article .tile:hover > div:nth-child(1) {
   display: none;
 }
 main section article .tile:hover > div:nth-child(2) {
-  display: flex;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
