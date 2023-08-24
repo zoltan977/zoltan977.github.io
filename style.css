@@ -191,4 +191,5 @@ main section article .tile-container .tile:hover div:nth-of-type(2) {
 main section article .tile-container .tile:hover div:nth-of-type(2) a {
   display: block;
   width: 100%;
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
