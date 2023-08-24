@@ -165,13 +165,13 @@ main section article .tile-container .tile {
 main section article .tile-container .tile * {
   margin: 0;
 }
+main section article .tile-container .tile img {
+  width: 100%;
+}
 main section article .tile-container .tile > div:nth-child(1) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-main section article .tile-container .tile > div:nth-child(1) img {
-  width: 100%;
 }
 main section article .tile-container .tile > div:nth-child(1) h3 {
   text-align: center;
@@ -187,12 +187,9 @@ main section article .tile-container .tile:hover div:nth-of-type(1) {
 }
 main section article .tile-container .tile:hover div:nth-of-type(2) {
   display: block;
-  width: 100%;
 }
 main section article .tile-container .tile:hover div:nth-of-type(2) a {
   display: block;
   width: 100%;
-}
-main section article .tile-container .tile:hover div:nth-of-type(2) a img {
-  width: 100%;
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */
