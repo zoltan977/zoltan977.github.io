@@ -140,15 +140,11 @@ main {
                     &:hover {
                         padding: 20px;
     
-                        div:nth-of-type(1) {
+                        div:nth-child(1) {
                             display: none;
                         }
-                        div:nth-of-type(2) {
+                        div:nth-child(2) {
                             display: block;
-                            
-                            a {
-                                display: block;
-                            }
                         }
                     }
                 }
