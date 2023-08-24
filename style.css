@@ -190,4 +190,5 @@ main section article .tile-container .tile:hover > div:nth-child(2) {
 }
 main section article .tile-container .tile:hover > div:nth-child(2) a {
   display: block;
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */
