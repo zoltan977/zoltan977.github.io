@@ -187,6 +187,7 @@ main section article .tile-container .tile:hover div:nth-of-type(1) {
 }
 main section article .tile-container .tile:hover div:nth-of-type(2) {
   display: block;
+  width: 100%;
 }
 main section article .tile-container .tile:hover div:nth-of-type(2) a {
   display: block;
