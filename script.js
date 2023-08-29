@@ -5,11 +5,7 @@ async function _load() {
     const english = document.querySelector('main > section:first-of-type > article:nth-of-type(3) > p:first-of-type');
     const contactTitle = document.querySelector('main > aside > section > h3:first-of-type');
     const langSwitch = document.querySelector('[type=checkbox]');
-
-    let textData = {};
-    let textDataPathHun = './text.hu.json';
-    let textDataPathEng = './text.en.json';
-
+    
     langSwitchHandler();
     
     async function getTextData(path) {
@@ -19,15 +15,19 @@ async function _load() {
     }
 
     async function langSwitchHandler() {
+        let textData = {};
+        const textDataPathHun = './text.hu.json';
+        const textDataPathEng = './text.en.json';
+
         if (langSwitch.checked) {
             textData = await getTextData(textDataPathEng);
         } else {
             textData = await getTextData(textDataPathHun);
         }
-        renderTextData();
+        renderTextData(textData);
     }
 
-    function renderTextData() {
+    function renderTextData(textData) {
         contactTitle.innerText = textData.contactTitle;
         techStackTitle.innerText = textData.techStackTitle;
         englishTitle.innerText = textData.englishTitle;
