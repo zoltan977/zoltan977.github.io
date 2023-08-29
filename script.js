@@ -1,9 +1,9 @@
 async function _load() {
     const aboutMeArticle = document.querySelector('main > section:first-of-type > article:first-of-type');
-    const techStackTitle = document.querySelector('main > section:first-of-type > article:nth-of-type(2) > h1:first-of-type');
-    const englishTitle = document.querySelector('main > section:first-of-type > article:nth-of-type(3) > h1:first-of-type');
-    const english = document.querySelector('main > section:first-of-type > article:nth-of-type(3) > p:first-of-type');
-    const contactTitle = document.querySelector('main > aside > section > h3:first-of-type');
+    const techStackTitle = document.querySelector('main > section:first-of-type > article:nth-of-type(2) > h1');
+    const englishTitle = document.querySelector('main > section:first-of-type > article:nth-of-type(3) > h1');
+    const english = document.querySelector('main > section:first-of-type > article:nth-of-type(3) > p');
+    const contactTitle = document.querySelector('main > aside > section > h3');
     const langSwitch = document.querySelector('[type=checkbox]');
     
     langSwitchHandler();
