@@ -1,28 +1,28 @@
 async function _load() {
+    async function getTextData(path) {
+        const response = await fetch(path);
+        const json = await response.json();
+        return json;
+    }
+    function renderTextData(textData) {
+        contactTitle.innerText = textData.contactTitle;
+        techStackTitle.innerText = textData.techStackTitle;
+        englishTitle.innerText = textData.englishTitle;
+        english.innerText = textData.english;
+
+        aboutMeArticle.innerHTML = "";
+        const aboutMeTitle = document.createElement("h1");
+        aboutMeTitle.innerText = textData.aboutMeTitle;
+        aboutMeArticle.appendChild(aboutMeTitle);
+
+        const aboutMeTexts = textData.aboutMe;
+        for (const text of aboutMeTexts) {
+            const p = document.createElement("p");
+            p.innerHTML = text;
+            aboutMeTitle.insertAdjacentElement("afterend", p);
+        }
+    }
     async function langSwitchHandler() {
-        async function getTextData(path) {
-            const response = await fetch(path);
-            const json = await response.json();
-            return json;
-        }
-        function renderTextData(textData) {
-            contactTitle.innerText = textData.contactTitle;
-            techStackTitle.innerText = textData.techStackTitle;
-            englishTitle.innerText = textData.englishTitle;
-            english.innerText = textData.english;
-    
-            aboutMeArticle.innerHTML = "";
-            const aboutMeTitle = document.createElement("h1");
-            aboutMeTitle.innerText = textData.aboutMeTitle;
-            aboutMeArticle.appendChild(aboutMeTitle);
-    
-            const aboutMeTexts = textData.aboutMe;
-            for (const text of aboutMeTexts) {
-                const p = document.createElement("p");
-                p.innerHTML = text;
-                aboutMeTitle.insertAdjacentElement("afterend", p);
-            }
-        }
 
         let textData = {};
         const textDataPathHun = './text.hu.json';

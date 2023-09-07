@@ -153,36 +153,45 @@ main section article .tile-container {
   gap: 10px;
   padding: 1em 0;
 }
-main section article .tile-container .tile {
-  display: flex;
+main section article .tile-container .flip-tile {
   width: 200px;
   height: 200px;
-  background-color: black;
-  padding: 5px;
+  background-color: transparent;
   box-sizing: border-box;
-  border-radius: 5px;
+  perspective: 1000px;
 }
-main section article .tile-container .tile * {
-  margin: 0;
+main section article .tile-container .flip-tile:hover .flip-tile-inner {
+  transform: rotateY(180deg);
+}
+main section article .tile-container .flip-tile .flip-tile-inner {
+  position: relative;
   width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
-main section article .tile-container .tile div:nth-child(1) {
+main section article .tile-container .flip-tile .flip-tile-inner .flip-tile-front, main section article .tile-container .flip-tile .flip-tile-inner .flip-tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+main section article .tile-container .flip-tile .flip-tile-inner .flip-tile-front {
+  padding: 5px;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 5px;
 }
-main section article .tile-container .tile div:nth-child(1) h3 {
+main section article .tile-container .flip-tile .flip-tile-inner .flip-tile-front h3 {
   text-align: center;
+  margin: 0;
 }
-main section article .tile-container .tile div:nth-child(2) {
-  display: none;
-}
-main section article .tile-container .tile:hover {
+main section article .tile-container .flip-tile .flip-tile-inner .flip-tile-back {
+  background-color: black;
+  transform: rotateY(180deg);
   padding: 20px;
-}
-main section article .tile-container .tile:hover div:nth-child(1) {
-  display: none;
-}
-main section article .tile-container .tile:hover div:nth-child(2) {
-  display: block;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
