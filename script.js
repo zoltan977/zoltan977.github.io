@@ -1,4 +1,4 @@
-async function _load() {
+function _load() {
     async function getTextData(path) {
         const response = await fetch(path);
         const json = await response.json();
